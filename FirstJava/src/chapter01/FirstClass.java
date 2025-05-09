@@ -1,18 +1,23 @@
 package chapter01;
 
+import java.util.Scanner;
+//자바 밑에 lang관련된 거는 import가 없어도 괜찮은 부분
+
 public class FirstClass {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("우효~☆");
 
-		// sysout ctrl + space
-		// System.out.println();
-
-		System.out.println(Addition.Add(1, 2));
-
-		Addition addition = new Addition();
-		System.out.println(addition.Add(1, 2));
+		Scanner in = new Scanner(System.in);
+		System.out.print("아무 글자나 입력: ");
+		
+		String s = in.nextLine();
+		
+		System.out.printf("it's %s", s);
+		System.out.println();
+		System.out.printf("it's %s", s);
+		in.close();
+		
+		// SL4J
 	}
 
 }
