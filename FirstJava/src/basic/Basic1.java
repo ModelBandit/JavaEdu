@@ -8,6 +8,8 @@ public class Basic1 {
 		Scanner scanner = new Scanner(System.in);
 
 		String s = scanner.nextLine();
+		
+		int a = 1;
 
 		System.out.printf("%s이 입력되었습니다.", s);
 

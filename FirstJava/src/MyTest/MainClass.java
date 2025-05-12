@@ -3,6 +3,7 @@ package MyTest;
 public class MainClass {
 
 	public static void main(String[] args) {
+		
 		// TODO 
 		A a = null;
 		a.Func1(); /*돌아감*/
