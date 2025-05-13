@@ -1,27 +1,37 @@
 package MyTest;
 
+import java.util.Random;
+
 public class MainClass {
 
 	public static void main(String[] args) {
+		final int MAXSIZE = 10;
+		Random rand = new Random();
 		
-		// TODO 
-		A a = null;
-		a.Func1(); /*돌아감*/
+		int[] nums = new int[MAXSIZE];
+		for(int i=0;i<nums.length;++i)
+			nums[i] = rand.nextInt(MAXSIZE);
+
+		System.out.print("Before: ");
+		for(int i = 0;i<nums.length;++i) {
+			System.out.print(nums[i] + " ");
+		}
+		System.out.println();
+
+		qsort(nums, 0, MAXSIZE-1);
 		
-		try {
-			a.Func2(); /*안돌아감*/
-			System.out.println("정상");
+		System.out.print("After: ");
+		for(int num: nums) {
+			System.out.print(num + " ");
 		}
-		catch(NullPointerException e) {
-			System.out.println("비정상");
-			System.out.println(e);
-		}
+		System.out.println();
 	}
 	
-	public static void Func1(){
-		A a = new A();
-		A.B b = a.new B();
-		a.Func1();
+	static void qsort(int[] nums, int left, int right) {
+		A.qsort(nums, left, right);
 	}
-
+	
+	static void mergeSort(int[] nums, int left, int right) {
+		A.mergeSort(nums, left, right);
+	}
 }
