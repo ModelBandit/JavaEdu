@@ -8,3 +8,8 @@ public class MainClass {
 		MySort.bubbleSort(arr);
 	}
 }
+
+//public 으로 하면 오류발생
+class asd{
+	
+}
