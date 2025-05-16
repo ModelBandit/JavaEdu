@@ -44,6 +44,7 @@ public class Basic2 {
 		
 		if(num < 0){
 			System.out.println("이 값은 양수가 아닌 값을 입력했네요.");
+			scanner.close();
 			return;
 		}
 

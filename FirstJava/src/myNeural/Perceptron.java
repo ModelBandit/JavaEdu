@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 
 public class Perceptron {
 	private final int picSize = 100;
-	private String path = "C:\\Users\\user\\Desktop\\100100dog.png";
+	private String path = "C:\\Users\\user\\Desktop\\3232dog.png";
 	private float[] image = new float[picSize * picSize];
 		
 	public void Read() {

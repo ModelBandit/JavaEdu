@@ -92,5 +92,7 @@ public class Basic4 {
 			sumMath += students[j][1];
 		}
 		System.out.printf("평균\t%.1f\t%.1f", sumEng / 3f, sumMath / 3f);
+		
+		scanner.close();
 	}
 }
