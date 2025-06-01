@@ -16,8 +16,8 @@ public class MyList {
 
 		Node otherNode = node;
 		while (otherNode.next != null) {
-			if(otherNode.next.value > num) {
-				Node newNode = new Node(num,otherNode.next);
+			if (otherNode.next.value > num) {
+				Node newNode = new Node(num, otherNode.next);
 				otherNode.next = newNode;
 				return;
 			}
@@ -65,25 +65,23 @@ public class MyList {
 		Node otherNode = node;
 		Node prev = null;
 		Node next = otherNode.next;
-		
+
 		while (otherNode != null) {
 			if (otherNode.value == num) {
 				System.out.println(otherNode.value + " 삭제");
 				if (prev == null && next == null) {
 					node = null;
 					return;
-				}
-				else if (prev == null) {
+				} else if (prev == null) {
 					node.value = node.next.value;
 					node = node.next;
-				} 
-				else {
+				} else {
 					prev.next = next;
 				}
 			}
 			prev = otherNode;
 			otherNode = otherNode.next;
-			if(otherNode != null)
+			if (otherNode != null)
 				next = otherNode.next;
 		}
 	}
