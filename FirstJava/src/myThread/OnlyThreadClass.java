@@ -43,7 +43,7 @@ public class OnlyThreadClass {
 	public static void threadAdd(int num) {
 		System.out.println(num + " - 쓰레드 작업");
 		Thread[] threads = new Thread[num];
-		InfoClass info = new InfoClass();
+		SyncInfoClass info = new SyncInfoClass();
 
 		for (int i = 0; i < threads.length; ++i) {
 			threads[i] = new Thread() {
