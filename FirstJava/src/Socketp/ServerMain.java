@@ -13,14 +13,14 @@ import java.util.concurrent.locks.Lock;
 
 public class ServerMain {
 	public static void main(String[] args) {
-		Server server = new Server();
-		ServerSocket serverSocket = server.CreateServerSocket();
+		ServerSocket serverSocket = null;
 		Scanner scanner = new Scanner(System.in);
 		
 		Socket socket = null;
 		BufferedReader in = null;
 		PrintWriter out = null;
 		try {
+			serverSocket = new ServerSocket(8989);
 			socket = serverSocket.accept();
 			
 			InputStreamReader isr = new InputStreamReader(socket.getInputStream());
